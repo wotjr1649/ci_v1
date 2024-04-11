@@ -2,7 +2,7 @@ FROM wotjr980321/py_dev
 
 ENV PYTHONUNBUFFERED 1
 
-COPY app /src
+COPY /app /src
 COPY requirements.txt /src
 WORKDIR /src
 
