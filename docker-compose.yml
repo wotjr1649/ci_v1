@@ -3,12 +3,12 @@ version: '3.9'
 services:
   fastapi:
     container_name: fastapi_container
-    image: wotjr980321/py_fastapi
+    image: py_fastapi
     command: uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
     ports:
       - 8080:8080
     volumes:
-      - ~/workspace/_py_server/app:/code/app
+      - ~/workspace/_fastapi/ci_v1:/code/app
     restart: unless-stopped
     stdin_open: true
     tty: true
