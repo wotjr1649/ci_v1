@@ -1,12 +1,14 @@
 FROM wotjr980321/py_dev
 
+ENV PYTHONUNBUFFERED 1
+
 # WORKDIR /code
-WORKDIR /usr/src/app
-COPY requirements.txt ./
+COPY ./app /app
+COPY ./requirements.txt /app
+
+WORKDIR /app
 
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
-
-COPY . .
 
 EXPOSE 80
 
