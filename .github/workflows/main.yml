@@ -49,6 +49,6 @@ jobs:
         env:
           REPO: ci_test
         run: |
-          docker build -t $REPO .
-          docker tag $REPO:latest ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/$REPO:latest
-          docker push ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/$REPO:latest
+            docker build -t $REPO .
+            docker tag $REPO:latest $NAME/$REPO:latest
+            docker push $NAME/$REPO:latest
