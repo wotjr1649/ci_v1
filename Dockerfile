@@ -1,11 +1,11 @@
 FROM wotjr980321/py_dev
 
-ENV PYTHONUNBUFFERED 1
+# ENV PYTHONUNBUFFERED 1
 
 WORKDIR /usr/src
 COPY ./requirements.txt /usr/src/requirements.txt
 COPY ./app /usr/src/app
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 COPY start.sh /usr/src
 
