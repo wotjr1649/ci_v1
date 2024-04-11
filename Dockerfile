@@ -2,8 +2,9 @@ FROM wotjr980321/py_dev
 
 ENV PYTHONUNBUFFERED 1
 
-COPY . /src
-WORKDIR /src
+WORKDIR /usr/src
+COPY ./requirements.txt /usr/src/requirements.txt
+COPY ./app /usr/src/app
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 EXPOSE 80
